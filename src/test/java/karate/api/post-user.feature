@@ -2,9 +2,9 @@ Feature: Create User API
 
   Background:
     * def token = '8cafb8d9be4135f05a13cd04434acc947b566ae89a3bdc3124f96ba9d01936bd'
-    Given url 'https://gorest.co.in/public/v1/'
-    Given header Content-Type = 'application/json'
-    And header Authorization = 'Bearer ' + token
+    * url 'https://gorest.co.in/public/v1/'
+    * header Content-Type = 'application/json'
+    * header Authorization = 'Bearer ' + token
 
   Scenario: Create a user with valid data
     Given path 'users'
@@ -12,7 +12,7 @@ Feature: Create User API
       """
       {
     "name":"Mansi",
-    "email":"mansii1@gmail.com",
+    "email":"mansiii11@gmail.com",
     "gender":"female",
     "status":"inactive"
     }
@@ -20,7 +20,7 @@ Feature: Create User API
     When method post
     Then status 201
     And match response.data.name == "Mansi"
-    And match response.data.email == "mansii1@gmail.com"
+    And match response.data.email == "mansiii11@gmail.com"
     And match response.data.gender == "female"
     And match response.data.status == "inactive"
 
@@ -43,8 +43,8 @@ Feature: Create User API
     And request
       """
       {
-      "name":"123456$%",
-      "email":"sahii@outlookk.com",
+      "name":"1234567$%",
+      "email":"sahilii@outlookk.com",
       "gender":"male",
       "status":"inactive"
       }
@@ -72,7 +72,7 @@ Feature: Create User API
       """
       {
       "name":"Sahi",
-      "email":"mansii1@gmail.com",
+      "email":"mansiii11@gmail.com",
       "gender":"male",
       "status":"active"
       }

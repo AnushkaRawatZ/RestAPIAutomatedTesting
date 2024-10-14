@@ -2,12 +2,12 @@ Feature: Update user API
 
   Background:
     * def token = '8cafb8d9be4135f05a13cd04434acc947b566ae89a3bdc3124f96ba9d01936bd'
-    Given url 'https://gorest.co.in/public/v1/'
-    Given header Content-Type = 'application/json'
-    And header Authorization = 'Bearer ' + token
+    * url 'https://gorest.co.in/public/v1/'
+    * header Content-Type = 'application/json'
+    * header Authorization = 'Bearer ' + token
 
   Scenario: Update user's name to a valid name
-  Given path 'users/7452273'
+  Given path 'users/7469513'
   And request
   """
   {
@@ -19,43 +19,43 @@ Feature: Update user API
   And match response.data.name == "Ashi"
 
   Scenario: Update user's email to a valid email
-    Given path 'users/7452273'
+    Given path 'users/7469513'
     And request
     """
     {
-    "email":"nautiyalll@gmail.com"
+    "email":"abcdefghi@gmail.com"
     }
     """
     When method put
     Then status 200
-    And match response.data.email == "nautiyalll@gmail.com"
+    And match response.data.email == "abcdefghi@gmail.com"
 
   Scenario: Updated user's gender to a valid gender
-    Given path 'users/7452273'
+    Given path 'users/7469513'
     And request
     """
     {
-    "gender":"male"
+    "gender":"female"
     }
     """
     When method put
     Then status 200
-    And match response.data.gender == "male"
+    And match response.data.gender == "female"
 
   Scenario: Update user's status to a valid status
-    Given path 'users/7452273'
+    Given path 'users/7469513'
     And request
     """
     {
-    "status":"active"
+    "status":"inactive"
     }
     """
     When method put
     Then status 200
-    And match response.data.status == "active"
+    And match response.data.status == "inactive"
 
   Scenario: Update user's name to an invalid name
-  Given path 'users/7452273'
+  Given path 'users/7469513'
   And request
   """
   {
@@ -66,7 +66,7 @@ Feature: Update user API
   Then status 422
 
   Scenario: Update user's email to an invalid email
-  Given path 'users/7452273'
+  Given path 'users/7469513'
   And request
   """
   {
@@ -77,7 +77,7 @@ Feature: Update user API
   Then status 422
 
   Scenario: Update user's gender to an invalid gender
-  Given path 'users/7452273'
+  Given path 'users/7469513'
   And request
   """
   {
@@ -88,7 +88,7 @@ Feature: Update user API
   Then status 422
 
   Scenario: Update user's status to an invalid status
-  Given path 'users/7452273'
+  Given path 'users/7469513'
   And request
   """
   {
