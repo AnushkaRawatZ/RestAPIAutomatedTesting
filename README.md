@@ -69,8 +69,13 @@ Feature: Fetch user API
 
 ## Reporting Tests
 Reports are generated in the target/karate-reports directory. Open karate-summary.html.
-The following screenshots show the generated HTML report: 
+The following screenshots show the generated HTML report:
 
+<img width="1440" alt="screenshot1" src="https://github.com/user-attachments/assets/e9ea2071-185e-4eb8-8f5c-b934748f8fb6">
+<img width="1440" alt="screenshot2" src="https://github.com/user-attachments/assets/14bbecdf-4fd7-4a28-821f-9113f7c6ca4c">
+<img width="1440" alt="screenshot3" src="https://github.com/user-attachments/assets/63367493-2398-4676-b042-dee9c1c52f05">
+<img width="1440" alt="screenshot4" src="https://github.com/user-attachments/assets/fa6fa1d2-79cc-4e19-a078-3844ff0e03f8">
+<img width="1440" alt="screenshot5" src="https://github.com/user-attachments/assets/66708632-8e43-44aa-82a4-d177634a2613">
 
 ## Execution Result
 
