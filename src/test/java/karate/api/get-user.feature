@@ -12,10 +12,10 @@ Feature: Fetch user API
     Then status 200
 
   Scenario: Fetch data of a specific user using a valid ID
-    Given path 'users/7469514'
+    Given path 'users/7471676'
     When method get
     Then status 200
-    And match response.data.id == 7469514
+    And match response.data.id == 7471676
 
 
   Scenario:  Fetch data of a user using an Invalid ID

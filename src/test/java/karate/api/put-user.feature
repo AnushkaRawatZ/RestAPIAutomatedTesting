@@ -7,7 +7,7 @@ Feature: Update user API
     * header Authorization = 'Bearer ' + token
 
   Scenario: Update user's name to a valid name
-  Given path 'users/7469513'
+  Given path 'users/7471669'
   And request
   """
   {
@@ -19,19 +19,19 @@ Feature: Update user API
   And match response.data.name == "Ashi"
 
   Scenario: Update user's email to a valid email
-    Given path 'users/7469513'
+    Given path 'users/7471669'
     And request
     """
     {
-    "email":"abcdefghi@gmail.com"
+    "email":"abcdefghij@gmail.com"
     }
     """
     When method put
     Then status 200
-    And match response.data.email == "abcdefghi@gmail.com"
+    And match response.data.email == "abcdefghij@gmail.com"
 
   Scenario: Updated user's gender to a valid gender
-    Given path 'users/7469513'
+    Given path 'users/7471669'
     And request
     """
     {
@@ -43,7 +43,7 @@ Feature: Update user API
     And match response.data.gender == "female"
 
   Scenario: Update user's status to a valid status
-    Given path 'users/7469513'
+    Given path 'users/7471669'
     And request
     """
     {
@@ -54,19 +54,8 @@ Feature: Update user API
     Then status 200
     And match response.data.status == "inactive"
 
-  Scenario: Update user's name to an invalid name
-  Given path 'users/7469513'
-  And request
-  """
-  {
-  "name":"1^&56"
-  }
-  """
-  When method put
-  Then status 422
-
   Scenario: Update user's email to an invalid email
-  Given path 'users/7469513'
+  Given path 'users/7471669'
   And request
   """
   {

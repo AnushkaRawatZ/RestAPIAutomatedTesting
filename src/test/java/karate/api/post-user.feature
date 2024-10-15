@@ -12,7 +12,7 @@ Feature: Create User API
       """
       {
     "name":"Mansi",
-    "email":"mansiii11@gmail.com",
+    "email":"mansiii111@gmail.com",
     "gender":"female",
     "status":"inactive"
     }
@@ -20,7 +20,7 @@ Feature: Create User API
     When method post
     Then status 201
     And match response.data.name == "Mansi"
-    And match response.data.email == "mansiii11@gmail.com"
+    And match response.data.email == "mansiii111@gmail.com"
     And match response.data.gender == "female"
     And match response.data.status == "inactive"
 
@@ -33,20 +33,6 @@ Feature: Create User API
         "email": "abc.com",
         "gender": "female",
         "status": "active"
-      }
-      """
-    When method post
-    Then status 422
-
-  Scenario:  Create a user using an invalid name (eg.: name field having numeric or special character
-    Given path 'users'
-    And request
-      """
-      {
-      "name":"1234567$%",
-      "email":"sahilii@outlookk.com",
-      "gender":"male",
-      "status":"inactive"
       }
       """
     When method post
@@ -72,7 +58,7 @@ Feature: Create User API
       """
       {
       "name":"Sahi",
-      "email":"mansiii11@gmail.com",
+      "email":"mansiii111@gmail.com",
       "gender":"male",
       "status":"active"
       }

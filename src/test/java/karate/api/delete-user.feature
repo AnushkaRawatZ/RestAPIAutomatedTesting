@@ -7,11 +7,11 @@ Feature: Delete user API
     * header Authorization = 'Bearer ' + token
 
   Scenario: Delete a user using a valid ID
-    Given path 'users/7468698'
+    Given path 'users/7471668'
     When method delete
     Then status 204
 
-    Given path 'users/7468698'
+    Given path 'users/7471668'
     When method get
     Then status 404
 
@@ -27,6 +27,6 @@ Feature: Delete user API
     Then status 404
 
   Scenario: Delete a user using an id which has already been deleted
-    Given path 'users/7468698'
+    Given path 'users/7471679'
     When method delete
     Then status 404
