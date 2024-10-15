@@ -55,10 +55,10 @@ Each test typically includes the following components:
 Feature: Fetch user API
 
   Background:
-    * def token = '8cafb8d9be4135f05a13cd04434acc947b566ae89a3bdc3124f96ba9d01936bd'
-    Given url 'https://gorest.co.in/public/v1/'
-    Given header Content-Type = 'application/json'
-    And header Authorization = 'Bearer ' + token
+    * def token = 'someToken'
+    * url 'https://gorest.co.in/public/v1/'
+    * header Content-Type = 'application/json'
+    * header Authorization = 'Bearer ' + token
 
   Scenario: Fetch data of all users
     Given path 'users'
