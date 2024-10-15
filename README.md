@@ -70,12 +70,12 @@ Feature: Fetch user API
 ## Reporting Tests
 Reports are generated in the target/karate-reports directory. Open karate-summary.html.
 The following screenshots show the generated HTML report:
+<img width="1440" alt="Screenshot 2024-10-15 at 10 59 54 AM" src="https://github.com/user-attachments/assets/7be6fd54-274f-490f-8b50-f65e82b91d8f">
 
-<img width="1440" alt="screenshot1" src="https://github.com/user-attachments/assets/e9ea2071-185e-4eb8-8f5c-b934748f8fb6">
-<img width="1440" alt="screenshot2" src="https://github.com/user-attachments/assets/14bbecdf-4fd7-4a28-821f-9113f7c6ca4c">
-<img width="1440" alt="screenshot3" src="https://github.com/user-attachments/assets/63367493-2398-4676-b042-dee9c1c52f05">
-<img width="1440" alt="screenshot4" src="https://github.com/user-attachments/assets/fa6fa1d2-79cc-4e19-a078-3844ff0e03f8">
-<img width="1440" alt="screenshot5" src="https://github.com/user-attachments/assets/66708632-8e43-44aa-82a4-d177634a2613">
+<img width="1436" alt="Screenshot 2024-10-15 at 11 01 24 AM" src="https://github.com/user-attachments/assets/3e77723e-3ff0-444d-b57d-de0f225cf91e">
+
+<img width="1193" alt="Screenshot 2024-10-15 at 11 00 09 AM" src="https://github.com/user-attachments/assets/57df00bc-0a5d-4b3d-bdb2-4a9c84d8efc2">
+
 
 ## Execution Result
 
