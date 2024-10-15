@@ -64,6 +64,8 @@ Feature: Update user API
   """
   When method put
   Then status 422
+  And match response.data.field == "email"
+  And match response.data.message == "is invalid"
 
   Scenario: Update user's gender to an invalid gender
   Given path 'users/7469513'
@@ -75,6 +77,9 @@ Feature: Update user API
   """
   When method put
   Then status 422
+  And match response.data.field == "gender"
+  And match response.data.message == "can't be blank, can be male of female"
+
 
   Scenario: Update user's status to an invalid status
   Given path 'users/7469513'
@@ -86,6 +91,9 @@ Feature: Update user API
   """
   When method put
   Then status 422
+  And match response.data.field == "status"
+  And match response.data.message == "can't be blank"
+
 
   Scenario: Update user's details using an invalid ID
   Given path 'users/74'
@@ -97,6 +105,7 @@ Feature: Update user API
   """
   When method put
   Then status 404
+  And match response.data.message == "Resource not found"
 
   Scenario: Not providing an ID when using Put method
   Given path 'users'

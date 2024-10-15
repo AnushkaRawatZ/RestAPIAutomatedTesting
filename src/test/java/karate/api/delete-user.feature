@@ -10,7 +10,6 @@ Feature: Delete user API
     Given path 'users/7471668'
     When method delete
     Then status 204
-
     Given path 'users/7471668'
     When method get
     Then status 404

@@ -37,6 +37,8 @@ Feature: Create User API
       """
     When method post
     Then status 422
+    And match response.data.field == "email"
+    And match response.data.message == "is invalid"
 
   Scenario: Create a user using an invalid gender
     Given path 'users'
@@ -51,6 +53,9 @@ Feature: Create User API
       """
     When method post
     Then status 422
+    And match response.data.field == "gender"
+    And match response.data.message == "can't be blank, can be male of female"
+
 
   Scenario: Create a user using an email that has already been used
     Given path 'users'
@@ -65,6 +70,8 @@ Feature: Create User API
       """
     When method post
     Then status 422
+    And response.data.field == "email"
+    And response.data.message == "has already been taken"
 
   Scenario: Create a user using an invalid status value
     Given path 'users'
@@ -79,6 +86,8 @@ Feature: Create User API
       """
     When method post
     Then status 422
+    And match response.data.field == "status"
+    And match response.data.message == "can't be blank"
 
 
   Scenario: Creating a user without providing one or all field values
@@ -105,4 +114,7 @@ Feature: Create User API
       """
     When method post
     Then status 422
+    And match response.data.field == "name"
+    And match response.data.message == "can't be blank"
+
 
